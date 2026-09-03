@@ -1,0 +1,443 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oriens Alulin Products Inc. | Enterprise AI Architecture & Frontier Systems</title>
+  <meta name="description" content="Oriens Alulin Products Inc. delivers enterprise-grade AI architecture, autonomous agent workflows, and Model Context Protocol (MCP) integrations in Toronto, Canada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --bg-card: rgba(18, 24, 38, 0.7);
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      --glow: rgba(56, 189, 248, 0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    .background-glow {
+      position: fixed;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(129, 140, 248, 0.08) 40%, transparent 70%);
+      filter: blur(100px);
+      z-index: 0;
+      pointer-events: none;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(9, 13, 22, 0.8);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--accent-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #090d16;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.925rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #ffffff; }
+    .btn-nav {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      color: #ffffff !important;
+      padding: 0.5rem 1.15rem;
+      border-radius: 9999px;
+      font-size: 0.875rem !important;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    main {
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    .hero {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 6rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--accent);
+      font-size: 0.825rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.75rem;
+    }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+    }
+    h1 {
+      font-size: 3.75rem;
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.75rem;
+    }
+    .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 2.75rem;
+      font-weight: 400;
+    }
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: #ffffff;
+      color: #090d16;
+      padding: 0.9rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.2s;
+      box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.2);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px -5px rgba(255, 255, 255, 0.3);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: #ffffff;
+      padding: 0.9rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-title h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.75rem;
+    }
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 6rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.3);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+      font-size: 1.5rem;
+    }
+    .card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.015em;
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.975rem;
+      line-height: 1.65;
+    }
+    .about-card {
+      background: linear-gradient(135deg, rgba(18, 24, 38, 0.9) 0%, rgba(30, 41, 59, 0.5) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 3.5rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 6rem;
+    }
+    .about-content h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
+    }
+    .about-content p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .about-stats {
+      background: rgba(9, 13, 22, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .stat-label {
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+    .stat-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3.5rem 2rem;
+      background: rgba(9, 13, 22, 0.9);
+      color: var(--text-muted);
+      font-size: 0.925rem;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .footer-brand span {
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.75rem;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #ffffff; }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      .about-card { grid-template-columns: 1fr; padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">O</div>
+        <span>Oriens Alulin</span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">Practices</a>
+        <a href="#leadership">Leadership</a>
+        <a href="mailto:sophiexu@oriensalulin.ca" class="btn-nav">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Enterprise AI Architecture & Frontier Systems
+      </div>
+      <h1>Architecting Autonomous Intelligence for the <span class="gradient-text">Modern Enterprise</span>.</h1>
+      <p>Oriens Alulin Products Inc. engineers production-grade AI systems, specialized multi-agent workflows, and Model Context Protocol (MCP) integrations powered by frontier foundation models.</p>
+      <div class="cta-group">
+        <a href="mailto:sophiexu@oriensalulin.ca" class="btn-primary">Schedule Consultation</a>
+        <a href="#services" class="btn-secondary">Explore Practice Areas</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-title">
+        <h2>Core Practice Areas</h2>
+        <p>Deterministic, secure, and production-tested artificial intelligence architectures.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Agentic System Architecture</h3>
+          <p>Custom design and orchestration of autonomous agent networks, recursive task decomposition, and deterministic evaluation loops built for complex business operations.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🔌</div>
+          <h3>Model Context Protocol (MCP)</h3>
+          <p>Connecting frontier models like Claude to enterprise databases, internal APIs, and secure operational toolsets using standardized, auditable context interfaces.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>Enterprise AI Advisory & Governance</h3>
+          <p>Bridging corporate governance, financial precision, and advanced machine intelligence. Architecture roadmaps, reliability audits, and deployment security.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <div class="about-card">
+        <div class="about-content">
+          <h2>Executive Leadership</h2>
+          <p>Founded by <strong>Sophie Xu, CPA</strong>, Oriens Alulin Products Inc. unites financial rigor with cutting-edge frontier AI engineering. As a certified AI Architect, Sophie leads enterprise client engagements focused on high-leverage agentic automation and secure generative model deployment.</p>
+          <a href="mailto:sophiexu@oriensalulin.ca" class="btn-primary" style="display: inline-block;">Get in Touch</a>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-label">Headquarters</span>
+            <span class="stat-value">Toronto, Ontario, Canada 🇨🇦</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Corporate Entity</span>
+            <span class="stat-value">Oriens Alulin Products Inc.</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Executive Contact</span>
+            <span class="stat-value"><a href="mailto:sophiexu@oriensalulin.ca" style="color: var(--accent); text-decoration: none;">sophiexu@oriensalulin.ca</a></span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">General Inquiries</span>
+            <span class="stat-value"><a href="mailto:info@oriensalulin.ca" style="color: var(--text-muted); text-decoration: none;">info@oriensalulin.ca</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span>Oriens Alulin Products Inc.</span>
+        <p>Incorporated under the laws of Canada. Toronto, ON.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:sophiexu@oriensalulin.ca">Direct: sophiexu@oriensalulin.ca</a>
+        <a href="mailto:info@oriensalulin.ca">Inquiries: info@oriensalulin.ca</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
