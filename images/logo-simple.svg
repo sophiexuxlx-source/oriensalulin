@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="45%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="g1_inner" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+  </defs>
+  <!-- Outer precision loop -->
+  <path d="M 50,12 C 72,12 88,28 88,50 C 88,72 72,88 50,88 C 28,88 12,72 12,50 C 12,32 24,18 40,13" 
+        fill="none" stroke="url(#g1)" stroke-width="11" stroke-linecap="round" />
+  <!-- Inner coil eye/curl -->
+  <path d="M 45,28 C 58,28 69,38 69,51 C 69,64 58,73 45,73 C 34,73 28,64 28,52 C 28,42 35,35 44,35" 
+        fill="none" stroke="url(#g1_inner)" stroke-width="7.5" stroke-linecap="round" />
+  <circle cx="46" cy="51" r="5" fill="#0284c7" />
+</svg>
