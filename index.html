@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -211,7 +211,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
-      margin-bottom: 6rem;
+      margin-bottom: 2rem;
     }
     .card {
       background: var(--bg-card);
@@ -250,55 +250,6 @@
       font-size: 0.975rem;
       line-height: 1.65;
     }
-    .about-card {
-      background: linear-gradient(135deg, rgba(18, 24, 38, 0.9) 0%, rgba(30, 41, 59, 0.5) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 3.5rem;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3.5rem;
-      align-items: center;
-      margin-bottom: 6rem;
-    }
-    .about-content h2 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      margin-bottom: 1.25rem;
-    }
-    .about-content p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-    .about-stats {
-      background: rgba(9, 13, 22, 0.6);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .stat-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-    .stat-label {
-      font-size: 0.825rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-weight: 600;
-    }
-    .stat-value {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #ffffff;
-    }
     footer {
       border-top: 1px solid var(--border);
       padding: 3.5rem 2rem;
@@ -336,7 +287,6 @@
     .footer-links a:hover { color: #ffffff; }
     @media (max-width: 768px) {
       h1 { font-size: 2.5rem; }
-      .about-card { grid-template-columns: 1fr; padding: 2rem; }
     }
   </style>
 </head>
@@ -351,7 +301,6 @@
       </a>
       <div class="nav-links">
         <a href="#services">Practices</a>
-        <a href="#leadership">Leadership</a>
         <a href="mailto:sophiexu@oriensalulin.ca" class="btn-nav">Contact</a>
       </div>
     </div>
@@ -398,33 +347,6 @@
       </div>
     </section>
 
-    <section id="leadership">
-      <div class="about-card">
-        <div class="about-content">
-          <h2>Executive Leadership</h2>
-          <p>Founded by <strong>Sophie Xu, CPA</strong>, Oriens Alulin Products Inc. unites financial rigor with cutting-edge frontier AI engineering. As a certified AI Architect, Sophie leads enterprise client engagements focused on high-leverage agentic automation and secure generative model deployment.</p>
-          <a href="mailto:sophiexu@oriensalulin.ca" class="btn-primary" style="display: inline-block;">Get in Touch</a>
-        </div>
-        <div class="about-stats">
-          <div class="stat-item">
-            <span class="stat-label">Headquarters</span>
-            <span class="stat-value">Toronto, Ontario, Canada 🇨🇦</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-label">Corporate Entity</span>
-            <span class="stat-value">Oriens Alulin Products Inc.</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-label">Executive Contact</span>
-            <span class="stat-value"><a href="mailto:sophiexu@oriensalulin.ca" style="color: var(--accent); text-decoration: none;">sophiexu@oriensalulin.ca</a></span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-label">General Inquiries</span>
-            <span class="stat-value"><a href="mailto:info@oriensalulin.ca" style="color: var(--text-muted); text-decoration: none;">info@oriensalulin.ca</a></span>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
