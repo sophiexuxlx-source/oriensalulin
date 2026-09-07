@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </radialGradient>
+
+    <!-- 铝板 Gradients -->
+    <linearGradient id="plateBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#075985" />
+    </linearGradient>
+    <linearGradient id="plateSilver" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#cbd5e1" />
+      <stop offset="70%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+
+    <!-- 铝卷 Gradients -->
+    <radialGradient id="coilCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="60%" stop-color="#1e293b" />
+      <stop offset="85%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </radialGradient>
+    <linearGradient id="coilShell" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#94a3b8" />
+      <stop offset="60%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <!-- 铝箔 Gradients -->
+    <linearGradient id="foilWave" x1="0%" y1="0%" x2="100%" y2="40%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="25%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#cbd5e1" />
+      <stop offset="75%" stop-color="#ffffff" />
+      <stop offset="90%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="foilBack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+
+    <!-- Rivet Gradient -->
+    <radialGradient id="rivetGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+
+    <filter id="emblemShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" rx="48" fill="url(#bgGlow)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2" />
+
+  <!-- EMBLEM ARTWORK (Centered) -->
+  <g transform="translate(100, 70)" filter="url(#emblemShadow)">
+    <!-- 1. 铝板 (Aluminum Plate Foundation) -->
+    <!-- Base Plate -->
+    <polygon points="10,240 230,240 280,190 60,190" fill="url(#plateBlue)" stroke="#38bdf8" stroke-width="2" />
+    <polygon points="10,240 230,240 230,255 10,255" fill="#0369a1" />
+    <polygon points="230,240 280,190 280,205 230,255" fill="#075985" />
+    <!-- Rivets along Base Plate -->
+    <circle cx="45" cy="215" r="5" fill="url(#rivetGrad)" />
+    <circle cx="105" cy="215" r="5" fill="url(#rivetGrad)" />
+    <circle cx="165" cy="215" r="5" fill="url(#rivetGrad)" />
+    <circle cx="225" cy="215" r="5" fill="url(#rivetGrad)" />
+
+    <!-- Top Polished Sheet (铝板面) -->
+    <polygon points="-5,270 215,270 265,220 45,220" fill="url(#plateSilver)" stroke="#ffffff" stroke-width="2.5" />
+    <polygon points="-5,270 215,270 215,285 -5,285" fill="#64748b" />
+    <polygon points="215,270 265,220 265,235 215,285" fill="#475569" />
+    <!-- Rivets along Top Sheet -->
+    <circle cx="30" cy="245" r="5.5" fill="url(#rivetGrad)" />
+    <circle cx="90" cy="245" r="5.5" fill="url(#rivetGrad)" />
+    <circle cx="150" cy="245" r="5.5" fill="url(#rivetGrad)" />
+    <circle cx="210" cy="245" r="5.5" fill="url(#rivetGrad)" />
+
+    <!-- 2. 铝卷 (Aluminum Master Coil Core) -->
+    <g transform="translate(150, 130)">
+      <ellipse cx="0" cy="0" rx="90" ry="90" fill="url(#plateBlue)" stroke="#38bdf8" stroke-width="4" />
+      <ellipse cx="0" cy="0" rx="76" ry="76" fill="url(#coilShell)" stroke="#0284c7" stroke-width="3" />
+      <ellipse cx="0" cy="0" rx="64" ry="64" fill="none" stroke="#475569" stroke-width="3" stroke-dasharray="10,5" />
+      <ellipse cx="0" cy="0" rx="52" ry="52" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+      <ellipse cx="0" cy="0" rx="42" ry="42" fill="url(#coilShell)" stroke="#64748b" stroke-width="2.5" />
+      <!-- Coil Eye -->
+      <ellipse cx="0" cy="0" rx="25" ry="25" fill="url(#coilCenter)" stroke="#ffffff" stroke-width="3.5" />
+      <!-- Radial Sheen -->
+      <path d="M-64,-64 A90,90 0 0,1 64,-64 L42,-42 A60,60 0 0,0 -42,-42 Z" fill="#ffffff" opacity="0.3" />
+    </g>
+
+    <!-- 3. 铝箔 (Aluminum Foil Dynamic Fluid Ribbon) -->
+    <!-- Foil Shadow Loop -->
+    <path d="M 150,40 C 225,40 290,85 290,140 C 290,195 235,230 165,230 C 105,230 75,190 75,145" 
+          fill="none" stroke="url(#foilBack)" stroke-width="18" stroke-linecap="round" />
+    <!-- Foil Gloss Face -->
+    <path d="M 40,155 C 40,75 105,15 180,15 C 260,15 310,75 310,140 C 310,210 250,250 180,250 C 125,250 95,220 95,175 C 95,120 145,95 185,95" 
+          fill="none" stroke="url(#foilWave)" stroke-width="13" stroke-linecap="round" />
+    <!-- Razor-thin Foil Highlight Line -->
+    <path d="M 40,155 C 40,75 105,15 180,15 C 260,15 310,75 310,140 C 310,210 250,250 180,250" 
+          fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.95" />
+
+    <!-- Industrial Rivets along Foil Path (Google Doodle style) -->
+    <circle cx="180" cy="22" r="4" fill="url(#rivetGrad)" />
+    <circle cx="280" cy="85" r="4" fill="url(#rivetGrad)" />
+    <circle cx="305" cy="155" r="4" fill="url(#rivetGrad)" />
+    <circle cx="245" cy="240" r="4" fill="url(#rivetGrad)" />
+  </g>
+
+  <!-- Labels in footer of emblem -->
+  <text x="250" y="440" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.1em">
+    ORIENS ALULIN
+  </text>
+  <text x="250" y="468" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="0.25em">
+    COIL • SHEET • FOIL
+  </text>
+</svg>

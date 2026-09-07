@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient for dark or transparent preview -->
+    <linearGradient id="bgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+
+    <!-- Gradients for Aluminum Plates (铝板) -->
+    <linearGradient id="plateTopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#0284c7" />
+      <stop offset="70%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#075985" />
+    </linearGradient>
+    <linearGradient id="plateSilver" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="30%" stop-color="#cbd5e1" />
+      <stop offset="60%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+    <linearGradient id="plateEdgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0c4a6e" />
+    </linearGradient>
+
+    <!-- Gradients for Aluminum Coil (铝卷) -->
+    <radialGradient id="coilCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="60%" stop-color="#1e293b" />
+      <stop offset="75%" stop-color="#64748b" />
+      <stop offset="90%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </radialGradient>
+    <linearGradient id="coilShell" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#94a3b8" />
+      <stop offset="50%" stop-color="#f8fafc" />
+      <stop offset="75%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Gradients for Aluminum Foil (铝箔) -->
+    <linearGradient id="foilWave" x1="0%" y1="0%" x2="100%" y2="40%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="25%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#cbd5e1" />
+      <stop offset="75%" stop-color="#ffffff" />
+      <stop offset="90%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="foilBack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+
+    <!-- Chrome Text Gradient -->
+    <linearGradient id="textChrome" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Rivet Gradient (Google Doodle Style) -->
+    <radialGradient id="rivetGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="logoShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Optional Subtle Background for standalone view -->
+  <rect width="100%" height="100%" rx="24" fill="url(#bgDark)" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5" />
+
+  <!-- EMBLEM GROUP (Left Side: X=50, Y=30) -->
+  <g transform="translate(50, 30)" filter="url(#logoShadow)">
+    
+    <!-- ============================================================ -->
+    <!-- 1. PRODUCT: ALUMINUM SHEETS & PLATES (铝板)                  -->
+    <!-- 3D Beveled Rectangular Stacked Plates with Industrial Rivets -->
+    <!-- ============================================================ -->
+    <!-- Lower Plate (Base Layer) -->
+    <polygon points="20,185 160,185 195,150 55,150" fill="#0369a1" stroke="#38bdf8" stroke-width="1.5" />
+    <polygon points="20,185 160,185 160,195 20,195" fill="#0284c7" />
+    <!-- Rivets along edge of Lower Plate -->
+    <circle cx="45" cy="168" r="3.5" fill="url(#rivetGrad)" />
+    <circle cx="85" cy="168" r="3.5" fill="url(#rivetGrad)" />
+    <circle cx="125" cy="168" r="3.5" fill="url(#rivetGrad)" />
+    <circle cx="165" cy="168" r="3.5" fill="url(#rivetGrad)" />
+
+    <!-- Top Plate (Polished Beveled Aluminum Plate) -->
+    <polygon points="10,205 150,205 185,170 45,170" fill="url(#plateSilver)" stroke="#ffffff" stroke-width="2" />
+    <polygon points="10,205 150,205 150,215 10,215" fill="#64748b" />
+    <polygon points="150,205 185,170 185,180 150,215" fill="#475569" />
+    <!-- Rivets along Top Plate -->
+    <circle cx="35" cy="188" r="4" fill="url(#rivetGrad)" />
+    <circle cx="75" cy="188" r="4" fill="url(#rivetGrad)" />
+    <circle cx="115" cy="188" r="4" fill="url(#rivetGrad)" />
+    <circle cx="155" cy="188" r="4" fill="url(#rivetGrad)" />
+
+    <!-- ============================================================ -->
+    <!-- 2. PRODUCT: ALUMINUM COIL (铝卷)                             -->
+    <!-- Concentric Rolled Cylinder Master Coil                       -->
+    <!-- ============================================================ -->
+    <g transform="translate(115, 105)">
+      <!-- Outer Coil Shell -->
+      <ellipse cx="0" cy="0" rx="68" ry="68" fill="url(#plateTopGrad)" stroke="#38bdf8" stroke-width="3" />
+      <ellipse cx="0" cy="0" rx="58" ry="58" fill="url(#coilShell)" stroke="#0284c7" stroke-width="2" />
+      <!-- Concentric Winding Rings (representing tightly wound sheet layers) -->
+      <ellipse cx="0" cy="0" rx="50" ry="50" fill="none" stroke="#475569" stroke-width="2.5" stroke-dasharray="8,4" />
+      <ellipse cx="0" cy="0" rx="42" ry="42" fill="none" stroke="#38bdf8" stroke-width="2" />
+      <ellipse cx="0" cy="0" rx="34" ry="34" fill="url(#coilShell)" stroke="#64748b" stroke-width="2" />
+      <!-- Center Eye (Coil Core) -->
+      <ellipse cx="0" cy="0" rx="20" ry="20" fill="url(#coilCenter)" stroke="#f8fafc" stroke-width="3" />
+      <!-- Metallic Reflection Arc -->
+      <path d="M-48,-48 A68,68 0 0,1 48,-48 L32,-32 A46,46 0 0,0 -32,-32 Z" fill="#ffffff" opacity="0.3" />
+    </g>
+
+    <!-- ============================================================ -->
+    <!-- 3. PRODUCT: ALUMINUM FOIL (铝箔)                             -->
+    <!-- Ultra-thin, Fluid Undulating High-Gloss Foil Ribbon           -->
+    <!-- ============================================================ -->
+    <!-- Foil Back Shadow Loop -->
+    <path d="M 115,35 C 170,35 220,68 220,112 C 220,158 180,185 125,185 C 80,185 60,152 60,118" 
+          fill="none" stroke="url(#foilBack)" stroke-width="14" stroke-linecap="round" />
+    <!-- Foil Gloss Face Ribbon -->
+    <path d="M 30,128 C 30,65 82,16 138,16 C 200,16 235,65 235,112 C 235,166 192,198 138,198 C 95,198 72,175 72,142 C 72,98 110,76 142,76" 
+          fill="none" stroke="url(#foilWave)" stroke-width="10" stroke-linecap="round" />
+    <!-- Micro-gauge Foil Razor Reflection Edge -->
+    <path d="M 30,128 C 30,65 82,16 138,16 C 200,16 235,65 235,112 C 235,166 192,198 138,198" 
+          fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.95" />
+
+    <!-- Google Doodle Style Rivet Connectors -->
+    <circle cx="138" cy="21" r="3" fill="url(#rivetGrad)" />
+    <circle cx="210" cy="68" r="3" fill="url(#rivetGrad)" />
+    <circle cx="230" cy="125" r="3" fill="url(#rivetGrad)" />
+    <circle cx="188" cy="188" r="3" fill="url(#rivetGrad)" />
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TYPOGRAPHY & THREE-PRODUCT IDENTITY PILLARS                  -->
+  <!-- ============================================================ -->
+  <g transform="translate(325, 45)">
+    <!-- Main Wordmark: ORIENS ALULIN -->
+    <text x="0" y="72" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="58" font-weight="800" letter-spacing="-0.025em" fill="url(#textChrome)">
+      ORIENS <tspan fill="#38bdf8">ALULIN</tspan>
+    </text>
+
+    <!-- Subtitle: PRODUCTS INC. -->
+    <text x="2" y="112" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="18" font-weight="700" letter-spacing="0.28em" fill="#94a3b8">
+      PRODUCTS INC.
+    </text>
+
+    <!-- Three Products Indicator Strip -->
+    <g transform="translate(2, 138)">
+      <!-- Line 1: Coils (铝卷) -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="160" height="34" rx="17" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2" />
+        <circle cx="18" cy="17" r="6" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+        <circle cx="18" cy="17" r="2.5" fill="#38bdf8" />
+        <text x="32" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="12.5" font-weight="700" fill="#38bdf8" letter-spacing="0.05em">ALUMINUM COILS</text>
+      </g>
+
+      <!-- Line 2: Sheets (铝板) -->
+      <g transform="translate(172, 0)">
+        <rect x="0" y="0" width="170" height="34" rx="17" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.2" />
+        <rect x="12" y="11" width="12" height="12" rx="2" fill="#cbd5e1" />
+        <text x="32" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="12.5" font-weight="700" fill="#f1f5f9" letter-spacing="0.05em">SHEETS &amp; PLATES</text>
+      </g>
+
+      <!-- Line 3: Foils (铝箔) -->
+      <g transform="translate(354, 0)">
+        <rect x="0" y="0" width="155" height="34" rx="17" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2" />
+        <path d="M 12,20 Q 18,10 24,20" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" />
+        <text x="32" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="12.5" font-weight="700" fill="#38bdf8" letter-spacing="0.05em">ALUMINUM FOIL</text>
+      </g>
+    </g>
+  </g>
+</svg>
