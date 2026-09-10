@@ -1,0 +1,19 @@
+﻿# Temp & cache
+tmp/
+*.tmp
+
+# Work in progress backups and scratch references
+images/*-backup.jpg
+images/*-preview.jpg
+images/*-new.jpg*
+images/*-choice-*.jpg
+images/*-crop.jpg
+images/*-macro.png
+images/*-reference.png
+images/*-ref-*.jpg
+images/*-gengfei-*.jpg
+images/Gemini_Generated_Image_*
+images/aluminum-master-*
+images/aluminum-coil-v*
+images/aluminum-checker-plate-1.jpg
+images/images*
